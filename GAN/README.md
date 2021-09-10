@@ -19,6 +19,35 @@ real_label = Variable(torch.ones(img.size(0))).cuda()
 fake_label = Variable(torch.zeros(img.size(0))).cuda()
 ```
 
+* Algorithm
+
+$$
+Maximum\ Likelihood\ Estimation (P_{data}, P_{G})\equiv KL\ Divergence (P_{data}, P_{G})\\
+\max_{D}V(G,D)=-2\log{2}+2JSD(P_{data}||P_{G})
+$$
+
+* Flow
+
+$$
+Given\ G_0\\
+Find\ D_0^{*}\ maximizing\ V(G_0,D)\\
+\theta_G \leftarrow \theta_G - \mu\ \sigma V(G,D_0^*)/\sigma\theta_G\\
+Find\ D_1^*\ maximizing\ V(G_1,D)\\
+...
+$$
+
+* train D：测量JSD
+
+* train G：最小化JSD
+
+* 算法上，训练GAN的时候，$\max_{D}(V,G_D)$一定要得到最好的$D^*$，即训练$k$次$D$；但是G最好变化要小
+
+![](./src/微信截图_20210910152755.png)
+
+* 训练过程
+
+![](./src/微信截图_20210910154838.png)
+
 * d loss
 
 ![t1](./src/dloss.png)
