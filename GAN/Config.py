@@ -1,6 +1,6 @@
-DataSet = './DataSet'
-ModelResult = './ModelResult'
-GenerateResults = './GenerateResults'
+DataSet = './GAN/DataSet'
+ModelResult = './GAN/ModelResult'
+GenerateResults = './GAN/GenerateResults'
 BatchSize = 128
 Epoch = 1000
 lr = 0.0003
