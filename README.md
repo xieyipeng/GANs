@@ -1,6 +1,8 @@
 # GANs
 Generative Adversarial Networks Architecture 
 
+* `Theory Learning: Hung-yi Lee (Youtube)`
+
 ## GAN
 
 * `Author: Ian Goodfellow`
